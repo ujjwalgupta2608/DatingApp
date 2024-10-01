@@ -1,0 +1,7 @@
+package com.ripenapps.adoreandroid.models.response_models.connectionlist
+
+data class Lifestyle(
+    val drink: String?,
+    val profession: String?,
+    val smoke: String?
+)

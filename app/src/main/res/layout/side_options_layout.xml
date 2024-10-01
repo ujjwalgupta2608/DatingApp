@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corners_8dp"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/shareProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/share_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/disLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/dislike"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/share_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/dislike"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+        <TextView
+            android:id="@+id/block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_13sdp"
+            android:text="@string/block"
+            android:textColor="@color/red_EB4335"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+</layout>

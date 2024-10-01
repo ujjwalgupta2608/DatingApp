@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/background_corners_10dp_color_white_whisper"/>
+    <item android:id="@android:id/progress">
+        <clip android:drawable="@drawable/background_corners_10dp_color_theme" />
+    </item>
+
+</layer-list>

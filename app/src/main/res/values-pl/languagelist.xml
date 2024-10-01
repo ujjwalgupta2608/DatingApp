@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Zulu</string>
+    <string name="language_english">Angielski</string>
+    <string name="language_afrikaans">Afrikaans</string>
+    <string name="language_swahili">Suahili</string>
+    <string name="language_portuguese">Portugalski</string>
+    <string name="language_arabic">Nowoczesny Standardowy Arabski</string>
+    <string name="language_french">Francuski</string>
+    <string name="language_mandarin">Mandaryński</string>
+    <string name="language_hindi">Hinduski</string>
+    <string name="language_russian">Rosyjski</string>
+    <string name="language_spanish">Hiszpański</string>
+    <string name="language_bengali">Bengalski</string>
+    <string name="language_japanese">Japoński</string>
+    <string name="language_indonesian">Indonezyjski</string>
+    <string name="language_german">Niemiecki</string>
+    <string name="language_vietnamese">Wietnamski</string>
+    <string name="language_telugu">Telugu</string>
+    <string name="language_turkish">Turecki</string>
+    <string name="language_marathi">Marathi</string>
+    <string name="language_sesotho">Sesotho</string>
+    <string name="language_nigerian_pidgin">Pidgin Nigeryjski</string>
+    <string name="language_tamil">Tamilski</string>
+    <string name="language_romanian">Rumuński</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_ukrainian">Ukraiński</string>
+    <string name="language_italian">Włoski</string>
+    <string name="language_korean">Koreański</string>
+    <string name="language_thai">Tajski</string>
+    <string name="language_filipino">Filipiński</string>
+    <string name="language_dutch">Niderlandzki</string>
+</resources>

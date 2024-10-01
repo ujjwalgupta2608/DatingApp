@@ -1,0 +1,32 @@
+<resources>
+    <string name="language_zulu">ज़ुलू</string>
+    <string name="language_english">अंग्रेज़ी</string>
+    <string name="language_afrikaans">अफ़्रीकांस</string>
+    <string name="language_swahili">स्वाहिली</string>
+    <string name="language_portuguese">पुर्तगाली</string>
+    <string name="language_arabic">मानक अरबी</string>
+    <string name="language_french">फ्रेंच</string>
+    <string name="language_mandarin">मंदारिन</string>
+    <string name="language_hindi">हिंदी</string>
+    <string name="language_russian">रूसी</string>
+    <string name="language_spanish">स्पैनिश</string>
+    <string name="language_bengali">बंगाली</string>
+    <string name="language_japanese">जापानी</string>
+    <string name="language_indonesian">इंडोनेशियाई</string>
+    <string name="language_german">जर्मन</string>
+    <string name="language_vietnamese">वियतनामी</string>
+    <string name="language_telugu">तेलुगु</string>
+    <string name="language_turkish">तुर्की</string>
+    <string name="language_marathi">मराठी</string>
+    <string name="language_sesotho">सेसोथो</string>
+    <string name="language_nigerian_pidgin">नाइजीरियाई पिडगिन</string>
+    <string name="language_tamil">तमिल</string>
+    <string name="language_romanian">रोमानियाई</string>
+    <string name="language_polish">पोलिश</string>
+    <string name="language_ukrainian">यूक्रेनी</string>
+    <string name="language_italian">इतालवी</string>
+    <string name="language_korean">कोरियाई</string>
+    <string name="language_thai">थाई</string>
+    <string name="language_filipino">फिलिपीनो</string>
+    <string name="language_dutch">डच</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_top_corners_24dp">
+    <View
+        android:alpha="0.3"
+        android:id="@+id/view"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/background_corners_8dp"
+        android:backgroundTint="@color/grey_boulder"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/views"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/black_mine_shaft"
+        android:fontFamily="@font/inter_medium"
+        android:id="@+id/numberOfViews"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/storyViewsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberOfViews"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/adapter_story_views_item"
+        android:paddingHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

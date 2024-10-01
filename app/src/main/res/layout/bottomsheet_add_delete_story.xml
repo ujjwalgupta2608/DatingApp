@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_top_corners_24dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addNewStory"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:text="@string/add_new_story"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingVertical="@dimen/_10sdp"
+            android:id="@+id/deleteStory"
+            app:layout_constraintTop_toBottomOf="@id/addNewStory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/delete"
+            android:textColor="@color/red_EB4335"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_18sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

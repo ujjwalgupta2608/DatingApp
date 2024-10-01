@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Kizulu</string>
+    <string name="language_english">Kiingereza</string>
+    <string name="language_afrikaans">Kiafrikaans</string>
+    <string name="language_swahili">Kiswahili</string>
+    <string name="language_portuguese">Kireno</string>
+    <string name="language_arabic">Kiarabu cha Kisasa</string>
+    <string name="language_french">Kifaransa</string>
+    <string name="language_mandarin">Kimandarin</string>
+    <string name="language_hindi">Kihindi</string>
+    <string name="language_russian">Kirusi</string>
+    <string name="language_spanish">Kihispania</string>
+    <string name="language_bengali">Kibengali</string>
+    <string name="language_japanese">Kijapani</string>
+    <string name="language_indonesian">Kiindonesia</string>
+    <string name="language_german">Kijerumani</string>
+    <string name="language_vietnamese">Kivietinamu</string>
+    <string name="language_telugu">Kitelugu</string>
+    <string name="language_turkish">Kituruki</string>
+    <string name="language_marathi">Kimarathi</string>
+    <string name="language_sesotho">Kisesotho</string>
+    <string name="language_nigerian_pidgin">Pidgin ya Nigeria</string>
+    <string name="language_tamil">Kitamil</string>
+    <string name="language_romanian">Kiromania</string>
+    <string name="language_polish">Kipolandi</string>
+    <string name="language_ukrainian">Kiukreni</string>
+    <string name="language_italian">Kiitaliano</string>
+    <string name="language_korean">Kikorea</string>
+    <string name="language_thai">Kithai</string>
+    <string name="language_filipino">Kifilipino</string>
+    <string name="language_dutch">Kiholanzi</string>
+</resources>

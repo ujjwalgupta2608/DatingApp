@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@+id/map_nav"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/searchUserFragment">
+
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SearchUserFragment"
+        android:label="SearchUserFragment"
+        tools:layout="@layout/fragment_search_user">
+    <action
+        android:id="@+id/searchUser_to_userDetail"
+        app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.UserDetailFragment"
+        android:label="UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail">
+        <argument
+            android:name="userListType"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/userDetail_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+        <action
+            android:id="@+id/userDetail_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showImageVideoFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ShowImageVideoFragment"
+        android:label="ShowImageVideoFragment"
+        tools:layout="@layout/fragment_show_image_video">
+        <argument
+            android:name="mediaList"
+            app:argType="com.ripenapps.adoreandroid.models.response_models.carddetails.MediaList"
+            app:nullable="false" />
+        <argument
+            android:name="previousSelection"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="singleMediaPosition"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_showImageVideoFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specificChatFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SpecificChatFragment"
+        android:label="SpecificChatFragment"
+        tools:layout="@layout/fragment_specific_chat">
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileName"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileUrl"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/specificChat_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+        <action
+            android:id="@+id/specificChat_to_showChatMedia"
+            app:destination="@id/showChatMediaFragment" />
+        <action
+            android:id="@+id/specificChat_to_callHistory"
+            app:destination="@id/callHistoryFragment" />
+        <action
+            android:id="@+id/specificChat_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/specificChat_to_outgoingVideoCallActivity"
+            app:destination="@id/outgoingVideoCallActivity" />
+        <action
+            android:id="@+id/action_specificChatFragment_to_outgoingAudioCallActivity"
+            app:destination="@id/outgoingAudioCallActivity" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/showChatMediaFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ShowChatMediaFragment"
+        android:label="fragment_show_chat_media"
+        tools:layout="@layout/fragment_show_chat_media" >
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/showChatMedia_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callHistoryFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.CallHistoryFragment"
+        android:label="CallHistoryFragment" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profile"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <activity
+        android:id="@+id/outgoingVideoCallActivity"
+        android:name="com.ripenapps.adoreandroid.agora.singlevideo.OutgoingVideoCallActivity"
+        android:label="OutgoingVideoCallActivity" >
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="userData"
+            app:argType="string"/>
+    </activity>
+    <activity
+        android:id="@+id/outgoingAudioCallActivity"
+        android:name="com.ripenapps.adoreandroid.agora.audio.OutgoingAudioCallActivity"
+        android:label="OutgoingAudioCallActivity" >
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="userData"
+            app:argType="string"/>
+    </activity>
+</navigation>

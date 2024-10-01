@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">ซูลู</string>
+    <string name="language_english">อังกฤษ</string>
+    <string name="language_afrikaans">แอฟริคานส์</string>
+    <string name="language_swahili">สวาฮิลี</string>
+    <string name="language_portuguese">โปรตุเกส</string>
+    <string name="language_arabic">อาหรับมาตรฐานสมัยใหม่</string>
+    <string name="language_french">ฝรั่งเศส</string>
+    <string name="language_mandarin">แมนดาริน</string>
+    <string name="language_hindi">ฮินดี</string>
+    <string name="language_russian">รัสเซีย</string>
+    <string name="language_spanish">สเปน</string>
+    <string name="language_bengali">เบงกาลี</string>
+    <string name="language_japanese">ญี่ปุ่น</string>
+    <string name="language_indonesian">อินโดนีเซีย</string>
+    <string name="language_german">เยอรมัน</string>
+    <string name="language_vietnamese">เวียดนาม</string>
+    <string name="language_telugu">เตลูกู</string>
+    <string name="language_turkish">ตุรกี</string>
+    <string name="language_marathi">มราฐี</string>
+    <string name="language_sesotho">เซโซโท</string>
+    <string name="language_nigerian_pidgin">ไนจีเรียพิดจิน</string>
+    <string name="language_tamil">ทมิฬ</string>
+    <string name="language_romanian">โรมาเนีย</string>
+    <string name="language_polish">โปแลนด์</string>
+    <string name="language_ukrainian">ยูเครน</string>
+    <string name="language_italian">อิตาลี</string>
+    <string name="language_korean">เกาหลี</string>
+    <string name="language_thai">ไทย</string>
+    <string name="language_filipino">ฟิลิปปินส์</string>
+    <string name="language_dutch">ดัตช์</string>
+</resources>

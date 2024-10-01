@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="isFreeSelected"
+            type="Boolean" />
+        <variable
+            name="subscriptionAmount"
+            type="String" />
+        <import type="android.text.TextUtils"/>
+
+    </data>
+
+    <LinearLayout
+        android:background="@mipmap/subscription_dialog_background"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/crossButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross_button_white"
+            android:layout_gravity="end"
+            android:paddingEnd="@dimen/_11sdp"
+            android:paddingTop="@dimen/_11sdp" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/white_whisper"
+            android:text="@string/get_adore_plus"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shindindi_plus_icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black_mine_shaft"
+            android:text="@string/_1_free_boost_a_month"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/grey_boulder"
+            android:text="@string/skip_the_line_to_get_more_matches"
+            android:layout_gravity="center_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/freeOuterLayout"
+            android:background="@{isFreeSelected?@drawable/background_corner_8dp_border_2dp:null}"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:background="@drawable/background_corners_8dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp">
+
+                <TextView
+                    android:id="@+id/freeText"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:text="@string/free"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:gravity="end"
+                    android:layout_toEndOf="@id/freeText"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingHorizontal="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:layout_toStartOf="@id/viewInFree"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:paddingHorizontal="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:alpha="0.8"
+                    android:text="@string/your_current_plan"
+                    android:layout_below="@id/freeText" />
+
+                <ImageView
+                    android:background="@drawable/background_right_corners_round_8dp"
+                    android:backgroundTint="@{isFreeSelected?@color/theme:@color/white_whisper}"
+                    android:id="@+id/freeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@{isFreeSelected?@drawable/free_icon_unselected:@drawable/free_icon_selected}"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/_12sdp" />
+
+                <View
+                    android:id="@+id/viewInFree"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_toStartOf="@+id/freeImage" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@{isFreeSelected?null:@drawable/background_corner_8dp_border_2dp}"
+            android:id="@+id/popular_outer_layout"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:background="@drawable/background_corners_8dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp">
+
+                <TextView
+                    android:id="@+id/popularText"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:text="@string/popular"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:gravity="end"
+                    android:layout_toEndOf="@id/popularText"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingHorizontal="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:layout_toStartOf="@id/viewInPopular"
+                    android:text="@{subscriptionAmount}" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:paddingHorizontal="@dimen/_9sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:alpha="0.8"
+                    android:text="@string/_1_month_subscription"
+                    android:layout_below="@id/popularText" />
+
+                <ImageView
+                    android:background="@drawable/background_right_corners_round_8dp"
+                    android:backgroundTint="@{isFreeSelected?@color/white_whisper:@color/theme}"
+                    android:id="@+id/popularImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@{isFreeSelected?@drawable/popular_icon_selected:@drawable/popular_icon_unselected}"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/_12sdp" />
+
+                <View
+                    android:id="@+id/viewInPopular"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_toStartOf="@+id/popularImage" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribeNowButton"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_27sdp"
+            android:text="@string/subscribe_now"
+            android:alpha="@{isFreeSelected?0.5f : 1.0f}"
+            android:clickable="@{isFreeSelected? false : true}"/>
+
+        <TextView
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:id="@+id/noThanks"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:paddingHorizontal="@dimen/_9sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/grey_boulder"
+            android:alpha="0.6"
+            android:text="@string/no_thanks"
+            android:layout_below="@id/popularText" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_boulder"
+            android:textSize="@dimen/_9sdp"
+            android:gravity="center_horizontal"
+            android:alpha="0.7"
+            android:fontFamily="@font/inter_regular"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make." />
+    </LinearLayout>
+</layout>

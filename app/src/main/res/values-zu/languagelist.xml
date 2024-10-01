@@ -1,0 +1,32 @@
+<resources>
+    <string name="language_zulu">isiZulu</string>
+    <string name="language_english">isiNgisi</string>
+    <string name="language_afrikaans">i-Afrikaans</string>
+    <string name="language_swahili">Kiswahili</string>
+    <string name="language_portuguese">isiPutukezi</string>
+    <string name="language_arabic">isi-Arabhu</string>
+    <string name="language_french">isiFulentshi</string>
+    <string name="language_mandarin">isiMandarin</string>
+    <string name="language_hindi">isiHindi</string>
+    <string name="language_russian">isiRashiya</string>
+    <string name="language_spanish">isiSpanish</string>
+    <string name="language_bengali">isiBengali</string>
+    <string name="language_japanese">isiJapane</string>
+    <string name="language_indonesian">isi-Indonesian</string>
+    <string name="language_german">isiJalimane</string>
+    <string name="language_vietnamese">isiVietnamese</string>
+    <string name="language_telugu">isiTelugu</string>
+    <string name="language_turkish">isiTurkey</string>
+    <string name="language_marathi">isiMarathi</string>
+    <string name="language_sesotho">isiSesotho</string>
+    <string name="language_nigerian_pidgin">i-Nigerian Pidgin</string>
+    <string name="language_tamil">isiTamil</string>
+    <string name="language_romanian">isiRomanian</string>
+    <string name="language_polish">isiPolish</string>
+    <string name="language_ukrainian">isi-Ukrainian</string>
+    <string name="language_italian">isi-Italian</string>
+    <string name="language_korean">isiKorean</string>
+    <string name="language_thai">isi-Thai</string>
+    <string name="language_filipino">isi-Filipino</string>
+    <string name="language_dutch">isi-Dutch</string>
+</resources>

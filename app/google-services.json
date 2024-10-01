@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "109192566865",
+    "project_id": "adore-d118e",
+    "storage_bucket": "adore-d118e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109192566865:android:5d81d481ecd50d91bb8070",
+        "android_client_info": {
+          "package_name": "com.example.shindindidatingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109192566865-kpja2qog39nci7psesfplf6uslqhhi0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc8NzgzvjPiO8ftxdFOxv3eXC0YTbzDXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109192566865-kpja2qog39nci7psesfplf6uslqhhi0l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109192566865-1noeh5ksu0nlmhqcm2g6avvtn9g0sbtf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripenapps.demoService"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109192566865:android:3d49fc9466abe8cabb8070",
+        "android_client_info": {
+          "package_name": "com.ripenapps.adoreandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109192566865-s0gkc9kvraqf48pf9bfvbf5td1dpr1lo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ripenapps.adoreandroid",
+            "certificate_hash": "17e417d8c95291300e731252dc0c925b5e05268b"
+          }
+        },
+        {
+          "client_id": "109192566865-kpja2qog39nci7psesfplf6uslqhhi0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc8NzgzvjPiO8ftxdFOxv3eXC0YTbzDXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109192566865-kpja2qog39nci7psesfplf6uslqhhi0l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109192566865-1noeh5ksu0nlmhqcm2g6avvtn9g0sbtf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripenapps.demoService"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

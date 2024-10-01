@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/home_to_storyView"
+            app:destination="@id/storyViewFragment" />
+        <action
+            android:id="@+id/home_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/home_to_filter"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/home_to_notification"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/home_to_location"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/home_to_likesMatch"
+            app:destination="@id/likesMatchFragment" />
+        <action
+            android:id="@+id/home_to_searchLocation"
+            app:destination="@id/searchLocationFragment" />
+        <action
+            android:id="@+id/home_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+        <action
+            android:id="@+id/home_to_choosePlan"
+            app:destination="@id/choosePlanFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/profile_to_editMyProfile"
+            app:destination="@id/editMyProfileFragment" />
+        <action
+            android:id="@+id/profile_to_settings"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/profile_to_FAQ"
+            app:destination="@id/FAQFragment" />
+        <action
+            android:id="@+id/profile_to_inviteFriends"
+            app:destination="@id/inviteFriendsFragment" />
+        <action
+            android:id="@+id/profile_to_payment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/profile_to_choosePlan"
+            app:destination="@id/choosePlanFragment" />
+        <action
+            android:id="@+id/profile_to_searchLocation"
+            app:destination="@id/searchLocationFragment" />
+        <action
+            android:id="@+id/profile_to_notification"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storyViewFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.StoryViewFragment"
+        android:label="StoryViewFragment"
+        tools:layout="@layout/fragment_story_view">
+        <argument
+            android:name="userStoryData"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="myStoryList"
+            app:argType="com.ripenapps.adoreandroid.models.response_models.myStoryList.StoryData"
+            app:nullable="false" />
+        <argument
+            android:name="otherUserInfo"
+            app:argType="com.ripenapps.adoreandroid.models.response_models.storyListing.StoryListing"
+            app:nullable="true" />
+        <action
+            android:id="@+id/storyView_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likeFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LikeFragment"
+        android:label="fragment_like"
+        tools:layout="@layout/fragment_like">
+        <action
+            android:id="@+id/like_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/like_to_likesMatch"
+            app:destination="@id/likesMatchFragment" />
+        <action
+            android:id="@+id/like_to_searchLocation"
+            app:destination="@id/searchLocationFragment" />
+        <action
+            android:id="@+id/like_to_notification"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/like_to_choosePlan"
+            app:destination="@id/choosePlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/chat_to_storyView"
+            app:destination="@id/storyViewFragment" />
+        <action
+            android:id="@+id/chat_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+        <action
+            android:id="@+id/chat_to_searchLocation"
+            app:destination="@id/searchLocationFragment" />
+        <action
+            android:id="@+id/chat_to_notification"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/chat_to_outgoingVideo"
+            app:destination="@id/outgoingVideoCallActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/search_to_searchUser"
+            app:destination="@id/searchUserFragment" />
+        <action
+            android:id="@+id/search_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/searchFragment_to_fromMapActivity"
+            app:destination="@id/fromMapActivity" />
+        <action
+            android:id="@+id/search_to_choosePlan"
+            app:destination="@id/choosePlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.UserDetailFragment"
+        android:label="UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail">
+        <argument
+            android:name="userListType"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/userDetail_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+        <action
+            android:id="@+id/userDetail_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showImageVideoFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ShowImageVideoFragment"
+        android:label="ShowImageVideoFragment"
+        tools:layout="@layout/fragment_show_image_video">
+        <argument
+            android:name="mediaList"
+            app:argType="com.ripenapps.adoreandroid.models.response_models.carddetails.MediaList"
+            app:nullable="false" />
+        <argument
+            android:name="previousSelection"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="singleMediaPosition"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_showImageVideoFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editMyProfileFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.EditMyProfileFragment"
+        android:label="EditMyProfileFragment"
+        tools:layout="@layout/fragment_edit_my_profile">
+        <action
+            android:id="@+id/editMyProfile_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/settings_to_changePassword"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/settings_to_webView"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/settings_to_help"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/settings_to_deleteAccount"
+            app:destination="@id/deleteAccountFragment" />
+        <action
+            android:id="@+id/settings_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/settings_to_selectLanguage"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password">
+        <action
+            android:id="@+id/changePassword_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/changePassword_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@layout/fragment_change_password"
+            app:popUpToInclusive="true"/>/>
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.WebviewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_webview">
+        <argument
+            android:name="screenName"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.HelpFragment"
+        android:label="HelpFragment"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.DeleteAccountFragment"
+        android:label="DeleteAccountFragment"
+        tools:layout="@layout/fragment_delete_account">
+        <action
+            android:id="@+id/deleteAccount_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.FAQFragment"
+        android:label="FAQFragment"
+        tools:layout="@layout/fragment_f_a_q" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification" >
+
+        <action
+            android:id="@+id/notification_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/notification_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inviteFriendsFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.InviteFriendsFragment"
+        android:label="InviteFriendsFragment"
+        tools:layout="@layout/fragment_invite_friends" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LocationFragment"
+        android:label="LocationFragment"
+        tools:layout="@layout/fragment_location">
+        <action
+            android:id="@+id/location_to_searchLocation"
+            app:destination="@id/searchLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchLocationFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SearchLocationFragment"
+        android:label="SearchLocationFragment"
+        tools:layout="@layout/fragment_search_location" />
+    <fragment
+        android:id="@+id/choosePlanFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ChoosePlanFragment"
+        android:label="ChoosePlanFragment"
+        tools:layout="@layout/fragment_choose_plan" >
+        <action
+            android:id="@+id/choosePlan_to_reviewSummary"
+            app:destination="@id/reviewSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likesMatchFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LikesMatchFragment"
+        android:label="LikesMatchFragment"
+        tools:layout="@layout/fragment_likes_match">
+
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileName"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileUrl"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="distance"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/likesMatch_to_specificChat"
+            app:destination="@id/specificChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specificChatFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SpecificChatFragment"
+        android:label="SpecificChatFragment"
+        tools:layout="@layout/fragment_specific_chat">
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileName"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profileUrl"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/specificChat_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+        <action
+            android:id="@+id/specificChat_to_showChatMedia"
+            app:destination="@id/showChatMediaFragment" />
+        <action
+            android:id="@+id/specificChat_to_callHistory"
+            app:destination="@id/callHistoryFragment" />
+        <action
+            android:id="@+id/specificChat_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/specificChat_to_outgoingVideoCallActivity"
+            app:destination="@id/outgoingVideoCallActivity" />
+        <action
+            android:id="@+id/action_specificChatFragment_to_outgoingAudioCallActivity"
+            app:destination="@id/outgoingAudioCallActivity" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SearchUserFragment"
+        android:label="SearchUserFragment"
+        tools:layout="@layout/fragment_search_user">
+        <action
+            android:id="@+id/searchUser_to_userDetail"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showChatMediaFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ShowChatMediaFragment"
+        android:label="fragment_show_chat_media"
+        tools:layout="@layout/fragment_show_chat_media">
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="receiverId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/showChatMedia_to_showImageVideo"
+            app:destination="@id/showImageVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/forgotPassword_to_loginCodeVerification"
+            app:destination="@id/loginCodeVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginCodeVerificationFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LoginCodeVerificationFragment"
+        android:label="LoginCodeVerificationFragment"
+        tools:layout="@layout/fragment_login_code_verification">
+        <argument
+            android:name="emailNumberCheck"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/loginCodeVerification_to_newPassword"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.NewPasswordFragment"
+        android:label="NewPasswordFragment"
+        tools:layout="@layout/fragment_new_password">
+        <argument
+            android:name="otp"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="emailNumberCheck"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/newPassword_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_changePassword"
+            app:destination="@id/changePasswordFragment"
+            app:popUpTo="@+id/changePasswordFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_deleteAccount"
+            app:destination="@id/deleteAccountFragment"
+            app:popUpTo="@id/deleteAccountFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_settings"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/callHistoryFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.CallHistoryFragment"
+        android:label="CallHistoryFragment" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="profile"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="roomId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <activity
+        android:id="@+id/fromMapActivity"
+        android:name="com.ripenapps.adoreandroid.views.activities.FromMapActivity"
+        android:label="FromMapActivity">
+        <argument
+            android:name="type"
+            app:argType="com.ripenapps.adoreandroid.utils.enums.SelectedView"
+            app:nullable="false" />
+        <argument
+            android:name="userListType"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="false" />
+    </activity>
+    <activity
+        android:id="@+id/outgoingVideoCallActivity"
+        android:name="com.ripenapps.adoreandroid.agora.singlevideo.OutgoingVideoCallActivity"
+        android:label="OutgoingVideoCallActivity" >
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="userData"
+            app:argType="string"/>
+    </activity>
+    <fragment
+        tools:layout="@layout/fragment_review_summary"
+        android:id="@+id/reviewSummaryFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ReviewSummaryFragment"
+        android:label="ReviewSummaryFragment" >
+        <argument
+            android:name="paidPlanData"
+            app:argType="com.ripenapps.adoreandroid.models.response_models.planList.Plan"
+            app:nullable="false" />
+        <argument
+            android:name="purchaseId"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="premiumPlanAmount"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/reviewSummary_to_paymentCompleted"
+            app:destination="@id/paymentCompletedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentCompletedFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.PaymentCompletedFragment"
+        android:label="fragment_payment_completed"
+        tools:layout="@layout/fragment_payment_completed" >
+        <action
+            android:id="@+id/paymentCompleted_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@layout/fragment_payment_completed"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <activity
+        android:id="@+id/outgoingAudioCallActivity"
+        android:name="com.ripenapps.adoreandroid.agora.audio.OutgoingAudioCallActivity"
+        android:label="OutgoingAudioCallActivity" >
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="userData"
+            app:argType="string"/>
+    </activity>
+    <fragment
+        tools:layout="@layout/fragment_select_language"
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SelectLanguageFragment"
+        android:label="SelectLanguageFragment" >
+        <action
+            android:id="@+id/selectLanguage_to_welcome"
+            app:destination="@id/welcomeFragment" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

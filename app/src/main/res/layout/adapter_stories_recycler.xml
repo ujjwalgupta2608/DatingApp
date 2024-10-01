@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storyLayout"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_18sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/otherStoryCardview"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toTopOf="@id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/theme"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white">
+
+            <com.google.android.material.card.MaterialCardView
+                app:strokeColor="@color/transparent"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/otherStoryImageview"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_placeholder" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/myStoryLayout"
+            android:gravity="center"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            app:layout_constraintBottom_toTopOf="@id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/myStoryCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:strokeColor="@color/transparent"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/image_placeholder"
+                    android:id="@+id/myStoryImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/background_my_story" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/plusCenter"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_story_icon" />
+            <ImageView
+                android:id="@+id/plusBottomRight"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_story_with_border" />
+        </RelativeLayout>
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/_6sdp"
+            android:id="@+id/name"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/add"
+            android:ellipsize="end"
+            android:textColor="@color/black_mine_shaft"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <ImageView
+            android:layout_marginBottom="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/online_icon"
+            android:id="@+id/onlineImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

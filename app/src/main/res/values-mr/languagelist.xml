@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">जुलू</string>
+    <string name="language_english">अंग्रजी</string>
+    <string name="language_afrikaans">आफ्रिकांस</string>
+    <string name="language_swahili">स्वाहिली</string>
+    <string name="language_portuguese">पोर्तुगीज</string>
+    <string name="language_arabic">आधुनिक मानक अरबी</string>
+    <string name="language_french">फ्रेंच</string>
+    <string name="language_mandarin">मँडरिन</string>
+    <string name="language_hindi">हिंदी</string>
+    <string name="language_russian">रशियन</string>
+    <string name="language_spanish">स्पॅनिश</string>
+    <string name="language_bengali">बंगाली</string>
+    <string name="language_japanese">जपानी</string>
+    <string name="language_indonesian">इंडोनेशियन</string>
+    <string name="language_german">जर्मन</string>
+    <string name="language_vietnamese">वियेतनामी</string>
+    <string name="language_telugu">तेलगू</string>
+    <string name="language_turkish">तुर्की</string>
+    <string name="language_marathi">मराठी</string>
+    <string name="language_sesotho">सेसोथो</string>
+    <string name="language_nigerian_pidgin">नायजेरियन पिड्गिन</string>
+    <string name="language_tamil">तामिळ</string>
+    <string name="language_romanian">रोमॅनियन</string>
+    <string name="language_polish">पोलिश</string>
+    <string name="language_ukrainian">युक्रेनियन</string>
+    <string name="language_italian">इटालियन</string>
+    <string name="language_korean">कोरियन</string>
+    <string name="language_thai">थाई</string>
+    <string name="language_filipino">फिलिपिनो</string>
+    <string name="language_dutch">डच</string>
+</resources>

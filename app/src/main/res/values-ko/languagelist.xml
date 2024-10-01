@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">줄루어</string>
+    <string name="language_english">영어</string>
+    <string name="language_afrikaans">아프리칸스어</string>
+    <string name="language_swahili">스와힐리어</string>
+    <string name="language_portuguese">포르투갈어</string>
+    <string name="language_arabic">현대 표준 아랍어</string>
+    <string name="language_french">프랑스어</string>
+    <string name="language_mandarin">만다린어</string>
+    <string name="language_hindi">힌디어</string>
+    <string name="language_russian">러시아어</string>
+    <string name="language_spanish">스페인어</string>
+    <string name="language_bengali">벵골어</string>
+    <string name="language_japanese">일본어</string>
+    <string name="language_indonesian">인도네시아어</string>
+    <string name="language_german">독일어</string>
+    <string name="language_vietnamese">베트남어</string>
+    <string name="language_telugu">텔루구어</string>
+    <string name="language_turkish">터키어</string>
+    <string name="language_marathi">마라티어</string>
+    <string name="language_sesotho">세소토어</string>
+    <string name="language_nigerian_pidgin">나이지리아 피진</string>
+    <string name="language_tamil">타밀어</string>
+    <string name="language_romanian">루마니아어</string>
+    <string name="language_polish">폴란드어</string>
+    <string name="language_ukrainian">우크라이나어</string>
+    <string name="language_italian">이탈리아어</string>
+    <string name="language_korean">한국어</string>
+    <string name="language_thai">태국어</string>
+    <string name="language_filipino">필리핀어</string>
+    <string name="language_dutch">네덜란드어</string>
+</resources>

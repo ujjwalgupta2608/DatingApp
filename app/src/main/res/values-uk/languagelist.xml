@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Зулу</string>
+    <string name="language_english">Англійська</string>
+    <string name="language_afrikaans">Африкаанс</string>
+    <string name="language_swahili">Суахілі</string>
+    <string name="language_portuguese">Португальська</string>
+    <string name="language_arabic">Сучасна стандартна арабська</string>
+    <string name="language_french">Французька</string>
+    <string name="language_mandarin">Мандаринська</string>
+    <string name="language_hindi">Хінді</string>
+    <string name="language_russian">Російська</string>
+    <string name="language_spanish">Іспанська</string>
+    <string name="language_bengali">Бенгальська</string>
+    <string name="language_japanese">Японська</string>
+    <string name="language_indonesian">Індонезійська</string>
+    <string name="language_german">Німецька</string>
+    <string name="language_vietnamese">В\'єтнамська</string>
+    <string name="language_telugu">Телугу</string>
+    <string name="language_turkish">Турецька</string>
+    <string name="language_marathi">Маратхі</string>
+    <string name="language_sesotho">Сесото</string>
+    <string name="language_nigerian_pidgin">Нігерійський піджін</string>
+    <string name="language_tamil">Тамільська</string>
+    <string name="language_romanian">Румунська</string>
+    <string name="language_polish">Польська</string>
+    <string name="language_ukrainian">Українська</string>
+    <string name="language_italian">Італійська</string>
+    <string name="language_korean">Корейська</string>
+    <string name="language_thai">Тайська</string>
+    <string name="language_filipino">Філіппінська</string>
+    <string name="language_dutch">Нідерландська</string>
+</resources>

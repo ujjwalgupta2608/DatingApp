@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://qiita.com/ntsk/items/dac92596742e18470a55 -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="getImage"
+            type="java.lang.String" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="5dp"
+        android:background="@color/transparent"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_card_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="0dp"
+                android:id="@+id/selectLeftImage"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="0dp"
+                android:id="@+id/selectRightImage"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/selectLeftImage"
+                app:layout_constraintBottom_toTopOf="@id/idButtonContainer"
+                app:layout_constraintEnd_toEndOf="@id/selectRightImage"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="0dp"
+                android:id="@+id/middleLayout"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="0dp">
+                    <ImageView
+                        android:id="@+id/cardViewImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="@color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="0dp">
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/gradientImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@color/theme"
+                        android:alpha="0.2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/seekbarRecycler"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/adapter_card_seekbar"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <RelativeLayout
+                    android:id="@+id/nameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="@dimen/_220sdp"
+                        android:minWidth="@dimen/_50sdp"
+                        android:text="Ratna, "
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/_24sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/inter_bold"/>
+                    <TextView
+                        android:layout_toEndOf="@id/name"
+                        android:gravity="center_vertical"
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22"
+                        android:textSize="@dimen/_24sdp"
+                        android:textColor="@color/white_whisper"
+                        android:fontFamily="@font/inter_regular"
+                        android:drawableEnd="@drawable/verified_tick_icon"
+                        android:drawablePadding="@dimen/_5sdp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_below="@id/nameLayout"
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/location_icon_white"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/white_whisper"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:paddingVertical="@dimen/_3sdp"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/idButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/rewind_icon"
+                    android:id="@+id/rewindButton"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/dislike_icon"
+                    android:id="@+id/dislikeButton"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/like_icon"
+                    android:id="@+id/likeButton" />
+
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/adCardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/adImage"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/skip_add"
+                        android:id="@+id/skip_add"/>
+                    <TextView
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:id="@+id/bannerUrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="Lorem Ipsum is simply dummy teetting industry."
+                        android:paddingStart="@dimen/_18sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/theme"
+                        android:layout_toStartOf="@id/adText"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"/>
+                    <TextView
+                        android:id="@+id/adText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/background_corners_8dp"
+                        android:textSize="12dp"
+                        android:drawableEnd="@drawable/ad_icon"
+                        android:drawablePadding="4dp"
+                        android:text="AD"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="@color/black_mine_shaft"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="3dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:id="@+id/description"
+                        android:maxLines="4"
+                        android:ellipsize="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:text="Lorem Ipsum is simply dummy text asdfadfof the printing and typesetting industry."
+                        android:paddingHorizontal="@dimen/_18sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/white_whisper"
+                        android:layout_above="@+id/adText"/>
+                    <TextView
+                        android:id="@+id/title"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_22sdp"
+                        android:text="Great holiday ideas"
+                        android:paddingHorizontal="@dimen/_18sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="@color/white_whisper"
+                        android:layout_above="@+id/description"/>
+<!--                    <View-->
+<!--                        android:id="@+id/viewOverButtons"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:layout_alignParentBottom="true"/>-->
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/left_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/dislike_icon_theme_color" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/right_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/like_icon" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

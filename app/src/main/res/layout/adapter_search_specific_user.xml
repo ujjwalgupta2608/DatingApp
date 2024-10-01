@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.ripenapps.adoreandroid.models.OptionsList" />
+
+    </data>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corners_18dp"
+        android:backgroundTint="@{model.isOptionSelected()?@color/theme:@color/white_whisper}"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:text="@{model.title}"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@{model.isOptionSelected()?@color/white_whisper:@color/black_mine_shaft}"
+        android:fontFamily="@font/inter_regular">
+
+    </TextView>
+</layout>

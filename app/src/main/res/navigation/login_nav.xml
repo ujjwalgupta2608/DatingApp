@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/splash_to_welcome"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/splash_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/splash_to_selectLanguage"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/welcome_to_walkthrough"
+            app:destination="@id/walkthroughFragment" />
+        <action
+            android:id="@+id/welcome_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkthroughFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.WalkthroughFragment"
+        android:label="WalkthroughFragment"
+        tools:layout="@layout/fragment_walkthrough">
+        <action
+            android:id="@+id/walkthrough_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/login_to_signUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/login_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/login_to_loginWithMobile"
+            app:destination="@id/loginWithMobileFragment" />
+        <action
+            android:id="@+id/login_to_signupVerifyMobile"
+            app:destination="@id/signupVerifyMobileFragment" />
+        <action
+            android:id="@+id/login_to_selectLanguage"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/signUp_to_verifyCodeSignup"
+            app:destination="@id/verifyCodeSignupFragment" />
+        <action
+            android:id="@+id/signUp_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/signUp_to_webview"
+            app:destination="@id/webviewFragment" />
+        <action
+            android:id="@+id/signUp_to_signupVerifyMobile"
+            app:destination="@id/signupVerifyMobileFragment" />
+        <action
+            android:id="@+id/signUp_to_selectLanguage"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/forgotPassword_to_loginCodeVerification"
+            app:destination="@id/loginCodeVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyCodeSignupFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SignupCodeVerificationFragment"
+        android:label="VerifyCodeSignupFragment"
+        tools:layout="@layout/fragment_signup_code_verification">
+        <argument
+            android:name="verifyInSignUpCheck"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/verifyCodeSignup_to_signupVerifyMobile"
+            app:destination="@id/signupVerifyMobileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupVerifyMobileFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SignupVerifyMobileFragment"
+        android:label="SignupVerifyMobileFragment"
+        tools:layout="@layout/fragment_signup_verify_mobile">
+        <action
+            android:id="@+id/signupVerifyMobile_to_signupCodeVerification"
+            app:destination="@id/verifyCodeSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginCodeVerificationFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LoginCodeVerificationFragment"
+        android:label="LoginCodeVerificationFragment"
+        tools:layout="@layout/fragment_login_code_verification">
+        <argument
+            android:name="emailNumberCheck"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/loginCodeVerification_to_newPassword"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.NewPasswordFragment"
+        android:label="NewPasswordFragment"
+        tools:layout="@layout/fragment_new_password">
+        <argument
+            android:name="otp"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="emailNumberCheck"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/newPassword_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_changePassword"
+            app:destination="@id/changePasswordFragment"
+            app:popUpTo="@+id/changePasswordFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/newPassword_to_deleteAccount"
+            app:destination="@id/deleteAccountFragment"
+            app:popUpTo="@id/deleteAccountFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/newPassword_to_settings"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/newPassword_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginWithMobileFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.LoginWithMobileFragment"
+        android:label="LoginWithMobileFragment"
+        tools:layout="@layout/fragment_login_with_mobile">
+        <action
+            android:id="@+id/loginWithMobile_to_loginCodeVerification"
+            app:destination="@id/loginCodeVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.WebviewFragment"
+        android:label="WebviewFragment" >
+        <argument
+            android:name="screenName"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_select_language"
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.ripenapps.adoreandroid.views.fragments.SelectLanguageFragment"
+        android:label="SelectLanguageFragment" >
+        <action
+            android:id="@+id/selectLanguage_to_welcome"
+            app:destination="@id/welcomeFragment" />
+        <argument
+            android:name="previousScreen"
+            app:argType="string" />
+    </fragment>
+</navigation>

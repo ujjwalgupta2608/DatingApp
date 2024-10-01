@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.ripenapps.adoreandroid.view_models.StoryViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_mine_shaft"
+        tools:context=".views.fragments.StoryViewFragment">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/storyViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <LinearLayout
+                android:id="@+id/seekbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekbarLayout">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:cardCornerRadius="50dp"
+                    app:strokeColor="@color/white_whisper"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:id="@+id/profileImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sample_person_profile" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@id/cardView"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/your_story"
+                    android:textColor="@color/white_whisper"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:id="@+id/sideOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:src="@drawable/three_dots_option" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/id_prev"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headerLayout"
+            android:layout_above="@id/chatLayout"
+            android:background="@color/transparent"
+            android:elevation="4dp"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:id="@+id/id_middle"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_below="@id/headerLayout"
+            android:layout_toEndOf="@id/id_prev"
+            android:layout_toStartOf="@id/id_next"
+            android:background="@color/transparent"
+            android:elevation="4dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_next"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_above="@id/chatLayout"
+            android:layout_below="@id/headerLayout"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:elevation="4dp"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_top_corners_8dp"
+            android:backgroundTint="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginVertical="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:background="@drawable/background_corners_8dp">
+                <EditText
+                    android:layout_centerVertical="true"
+                    android:id="@+id/chatText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/type_a_message_here"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:textColor="@color/black_mine_shaft"
+                    android:textColorHint="@color/grey_boulder"
+                    android:textSize="@dimen/_11sdp" />
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/send_message"
+                    android:id="@+id/sendMessage"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:drawableTop="@drawable/up_arrow_white"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white_whisper"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+</layout>

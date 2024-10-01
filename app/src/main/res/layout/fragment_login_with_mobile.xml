@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ripenapps.adoreandroid.view_models.LoginWithMobileViewModel" />
+        <variable
+            name="clickEvents"
+            type="kotlin.jvm.functions.Function1" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".views.fragments.LoginWithMobileFragment">
+
+        <ImageView
+            android:id="@+id/backFromLoginWithMobile"
+            android:onClick="@{viewModel::onClick}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:paddingHorizontal="@dimen/_60sdp"
+            android:gravity="center_horizontal"
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_42sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/tell_us_your_phone_number"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_19sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingHorizontal="@dimen/_60sdp"
+            android:text="@string/please_enter_the_mobile_number_associated_with_this_account"
+            android:textColor="@color/grey_boulder"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/phone_number"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <RelativeLayout
+            android:id="@+id/emailOrMobileLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_corners_8dp">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                app:ccpDialog_textColor="@color/grey_boulder"
+                app:ccp_textSize="@dimen/_10sdp"
+                app:ccp_arrowColor="@color/black"
+                app:ccp_showFlag="false"
+                app:ccp_defaultPhoneCode="27" />
+            <EditText
+                android:maxLines="1"
+                android:maxLength="14"
+                android:layout_toEndOf="@id/countryCode"
+                android:id="@+id/enterEmailOrMobile"
+                android:hint="@string/enter_phone_number"
+                android:textColorHint="@color/grey_boulder"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textColor="@color/black_mine_shaft"
+                android:textSize="@dimen/_10sdp"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sendOtpFromLoginWithMobile"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:onClick="@{()->clickEvents.invoke(0)}"
+            android:text="@string/send_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailOrMobileLayout" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loginWithEmail"
+            style="@style/button"
+            android:backgroundTint="@color/white_whisper"
+            android:textColor="@color/grey_boulder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:onClick="@{viewModel::onClick}"
+            android:text="@string/login_with_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sendOtpFromLoginWithMobile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

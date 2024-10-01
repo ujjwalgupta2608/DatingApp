@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">ズールー語</string>
+    <string name="language_english">英語</string>
+    <string name="language_afrikaans">アフリカーンス語</string>
+    <string name="language_swahili">スワヒリ語</string>
+    <string name="language_portuguese">ポルトガル語</string>
+    <string name="language_arabic">現代標準アラビア語</string>
+    <string name="language_french">フランス語</string>
+    <string name="language_mandarin">標準中国語</string>
+    <string name="language_hindi">ヒンディー語</string>
+    <string name="language_russian">ロシア語</string>
+    <string name="language_spanish">スペイン語</string>
+    <string name="language_bengali">ベンガル語</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_indonesian">インドネシア語</string>
+    <string name="language_german">ドイツ語</string>
+    <string name="language_vietnamese">ベトナム語</string>
+    <string name="language_telugu">テルグ語</string>
+    <string name="language_turkish">トルコ語</string>
+    <string name="language_marathi">マラーティー語</string>
+    <string name="language_sesotho">ソト語</string>
+    <string name="language_nigerian_pidgin">ナイジェリア・ピジン</string>
+    <string name="language_tamil">タミル語</string>
+    <string name="language_romanian">ルーマニア語</string>
+    <string name="language_polish">ポーランド語</string>
+    <string name="language_ukrainian">ウクライナ語</string>
+    <string name="language_italian">イタリア語</string>
+    <string name="language_korean">韓国語</string>
+    <string name="language_thai">タイ語</string>
+    <string name="language_filipino">フィリピノ語</string>
+    <string name="language_dutch">オランダ語</string>
+</resources>

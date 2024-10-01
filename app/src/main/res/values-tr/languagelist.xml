@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Zulu</string>
+    <string name="language_english">İngilizce</string>
+    <string name="language_afrikaans">Afrikaans</string>
+    <string name="language_swahili">Svahili</string>
+    <string name="language_portuguese">Portekizce</string>
+    <string name="language_arabic">Modern Standart Arapça</string>
+    <string name="language_french">Fransızca</string>
+    <string name="language_mandarin">Mandarin</string>
+    <string name="language_hindi">Hintçe</string>
+    <string name="language_russian">Rusça</string>
+    <string name="language_spanish">İspanyolca</string>
+    <string name="language_bengali">Bengalce</string>
+    <string name="language_japanese">Japonca</string>
+    <string name="language_indonesian">Endonezce</string>
+    <string name="language_german">Almanca</string>
+    <string name="language_vietnamese">Vietnamca</string>
+    <string name="language_telugu">Telugu</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_marathi">Marathi</string>
+    <string name="language_sesotho">Sesotho</string>
+    <string name="language_nigerian_pidgin">Nijerya Pidgin</string>
+    <string name="language_tamil">Tamilce</string>
+    <string name="language_romanian">Romence</string>
+    <string name="language_polish">Lehçe</string>
+    <string name="language_ukrainian">Ukraynaca</string>
+    <string name="language_italian">İtalyanca</string>
+    <string name="language_korean">Korece</string>
+    <string name="language_thai">Tayca</string>
+    <string name="language_filipino">Filipince</string>
+    <string name="language_dutch">Hollandaca</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">ஜுலு</string>
+    <string name="language_english">ஆங்கிலம்</string>
+    <string name="language_afrikaans">ஆபிரிக்கான்ஸ்</string>
+    <string name="language_swahili">ஸ்வாஹிலி</string>
+    <string name="language_portuguese">போர்த்துக்கீசு</string>
+    <string name="language_arabic">நவீன மானிய அரபு</string>
+    <string name="language_french">பிரெஞ்சு</string>
+    <string name="language_mandarin">மாண்டரின்</string>
+    <string name="language_hindi">இந்தி</string>
+    <string name="language_russian">ரஷ்யன்</string>
+    <string name="language_spanish">ஸ்பானிய</string>
+    <string name="language_bengali">பெங்காலி</string>
+    <string name="language_japanese">ஜப்பானிய</string>
+    <string name="language_indonesian">இந்தோனேஷியன்</string>
+    <string name="language_german">ஜெர்மன்</string>
+    <string name="language_vietnamese">வியட்நாமியன்</string>
+    <string name="language_telugu">தெலுங்கு</string>
+    <string name="language_turkish">துருக்கி</string>
+    <string name="language_marathi">மராத்தி</string>
+    <string name="language_sesotho">சேசோதோ</string>
+    <string name="language_nigerian_pidgin">நைஜீரியன் பிட்ஜின்</string>
+    <string name="language_tamil">தமிழ்</string>
+    <string name="language_romanian">ரோமானியன்</string>
+    <string name="language_polish">போலிஷ்</string>
+    <string name="language_ukrainian">உக்ரைனியன்</string>
+    <string name="language_italian">இத்தாலியன்</string>
+    <string name="language_korean">கொரியன்</string>
+    <string name="language_thai">தாய்லாந்து</string>
+    <string name="language_filipino">பிலிப்பினோ</string>
+    <string name="language_dutch">ஹொல்லாந்து</string>
+</resources>

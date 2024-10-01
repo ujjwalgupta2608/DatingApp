@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yesterday"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/grey_boulder"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginBottom="@dimen/_13sdp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/innerLayout"
+            android:layout_below="@id/date"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/background_sender_text"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/audioLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/playIcon"
+                    android:padding="10dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/play_audio_other"/>
+                <ImageView
+                    android:id="@+id/pause"
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/pause_audio_other"/>
+                <SeekBar
+                    android:id="@+id/idSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:thumbTint="@color/theme"
+                    android:outlineSpotShadowColor="@color/theme"
+                    android:outlineAmbientShadowColor="@color/theme"
+                    android:shadowColor="@color/theme"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/theme"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/playerTime"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/theme"/>
+
+            </LinearLayout>
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/audioLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioLayout"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:textSize="@dimen/_8sdp"
+                android:includeFontPadding="false"
+                android:textColor="@color/grey_boulder"
+                android:alpha="0.6"
+                android:fontFamily="@font/inter_regular"
+                android:text="09:34 PM"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

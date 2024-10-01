@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d0222c</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme">#6D53F4</color>
+    <color name="theme0.1">#1A6D53F4</color>
+
+    <color name="theme0.5">#806D53F4</color>
+
+    <color name="white_whisper">#F4F5F9</color>
+    <color name="white_whisper_50per">#80F4F5F9</color>
+    <color name="white_whisper_70per">#B3F4F5F9</color>
+    <color name="black_mine_shaft">#242424</color>
+    <color name="grey_boulder">#797979</color>
+    <color name="grey_boulder_30per">#4D797979</color>
+    <color name="unselected_dot_tab_layout">#806D53F4</color>
+    <color name="transparent">#00000000</color>
+    <color name="darkGrey">#707876</color>
+    <color name="red_EB4335">#EB4335</color>
+    <color name="green">#4DDF53</color>
+
+
+    <color name="blueGradient1">#516fc4</color>
+    <color name="blueGradient2">#20346d</color>
+    <color name="theme_txt_color">#00AC83</color>
+    <color name="gray_medium">#b7bbba</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="fade_white11">#EDE9E9</color>
+</resources>

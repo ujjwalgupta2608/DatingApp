@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.ripenapps.adoreandroid.view_models.LoginCodeVerificationViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".views.fragments.LoginCodeVerificationFragment">
+
+        <ImageView
+            android:id="@+id/backFromVerifyCodeLogin"
+            android:onClick="@{viewModel::onClick}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:paddingHorizontal="@dimen/_60sdp"
+            android:gravity="center_horizontal"
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_42sdp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/verify_code"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_19sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/emailOrNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingHorizontal="@dimen/_60sdp"
+            android:textColor="@color/grey_boulder"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            style="@style/PinWidget.PinView"
+            android:cursorVisible="true"
+            app:cursorColor="@color/black"
+            app:cursorWidth="1dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailOrNumberText"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black_mine_shaft"
+            android:textStyle="bold"
+            android:text="@={viewModel.otp}"
+            android:fontFamily="@font/inter_regular"
+            android:hint="----"
+            android:textColorHint="@color/black_mine_shaft"
+            app:hideLineWhenFilled="false"
+            android:inputType="number"
+            app:lineColor="@color/transparent"
+            app:itemCount="4"
+            app:itemWidth="@dimen/_58sdp"
+            app:itemHeight="@dimen/_32sdp"
+            app:itemRadius="8dp"
+            app:itemSpacing="@dimen/_12sdp"
+            android:itemBackground="@color/white_whisper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailOrNumberText" />
+
+        <TextView
+            android:id="@+id/didNotReceiveOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/didn_t_receive_otp"
+            android:textColor="@color/grey_boulder"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pinView" />
+
+        <TextView
+            android:id="@+id/resendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/resend_code"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintTop_toBottomOf="@+id/didNotReceiveOtp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verifyCodeInLogin"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:text="@string/verify"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resendOtp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

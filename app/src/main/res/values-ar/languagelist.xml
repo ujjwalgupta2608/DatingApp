@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">اللغة الزولو</string>
+    <string name="language_english">اللغة الإنجليزية</string>
+    <string name="language_afrikaans">اللغة الأفريكانية</string>
+    <string name="language_swahili">اللغة السواحيلية</string>
+    <string name="language_portuguese">اللغة البرتغالية</string>
+    <string name="language_arabic">اللغة العربية الفصحى</string>
+    <string name="language_french">اللغة الفرنسية</string>
+    <string name="language_mandarin">اللغة الماندرينية</string>
+    <string name="language_hindi">اللغة الهندية</string>
+    <string name="language_russian">اللغة الروسية</string>
+    <string name="language_spanish">اللغة الإسبانية</string>
+    <string name="language_bengali">اللغة البنغالية</string>
+    <string name="language_japanese">اللغة اليابانية</string>
+    <string name="language_indonesian">اللغة الإندونيسية</string>
+    <string name="language_german">اللغة الألمانية</string>
+    <string name="language_vietnamese">اللغة الفيتنامية</string>
+    <string name="language_telugu">اللغة التيلوجوية</string>
+    <string name="language_turkish">اللغة التركية</string>
+    <string name="language_marathi">اللغة الماراثية</string>
+    <string name="language_sesotho">اللغة السوتية</string>
+    <string name="language_nigerian_pidgin">لغة البيجين النيجيرية</string>
+    <string name="language_tamil">اللغة التاميلية</string>
+    <string name="language_romanian">اللغة الرومانية</string>
+    <string name="language_polish">اللغة البولندية</string>
+    <string name="language_ukrainian">اللغة الأوكرانية</string>
+    <string name="language_italian">اللغة الإيطالية</string>
+    <string name="language_korean">اللغة الكورية</string>
+    <string name="language_thai">اللغة التايلاندية</string>
+    <string name="language_filipino">اللغة الفلبينية</string>
+    <string name="language_dutch">اللغة الهولندية</string>
+</resources>

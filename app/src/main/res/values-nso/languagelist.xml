@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Zulu</string>
+    <string name="language_english">Senyesemane</string>
+    <string name="language_afrikaans">Afrikaans</string>
+    <string name="language_swahili">Swahili</string>
+    <string name="language_portuguese">Poto</string>
+    <string name="language_arabic">Arabic ea Bohlokoa</string>
+    <string name="language_french">Sejeremane</string>
+    <string name="language_mandarin">Mandarin</string>
+    <string name="language_hindi">Hindi</string>
+    <string name="language_russian">Rasha</string>
+    <string name="language_spanish">Sepanishe</string>
+    <string name="language_bengali">Bengali</string>
+    <string name="language_japanese">Japane</string>
+    <string name="language_indonesian">Indonesian</string>
+    <string name="language_german">Jemane</string>
+    <string name="language_vietnamese">Vietname</string>
+    <string name="language_telugu">Telugu</string>
+    <string name="language_turkish">Tseki</string>
+    <string name="language_marathi">Marathi</string>
+    <string name="language_sesotho">Sesotho</string>
+    <string name="language_nigerian_pidgin">Pidgin ea Nigeria</string>
+    <string name="language_tamil">Tamil</string>
+    <string name="language_romanian">Romana</string>
+    <string name="language_polish">Polish</string>
+    <string name="language_ukrainian">Ukrainian</string>
+    <string name="language_italian">Italian</string>
+    <string name="language_korean">Korean</string>
+    <string name="language_thai">Thai</string>
+    <string name="language_filipino">Filipino</string>
+    <string name="language_dutch">Holand</string>
+</resources>

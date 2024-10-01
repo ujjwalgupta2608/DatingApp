@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.ripenapps.adoreandroid.models.response_models.getquestions.GenderData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_11sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@{model.selected?@drawable/background_corner_8dp_border_1dp_bg_whitewhisper:@drawable/background_corners_8dp}"
+        >
+
+        <TextView
+            android:id="@+id/image"
+            android:text="@{model.emoji}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_23sdp"
+            android:gravity="center"
+            android:background="@drawable/round_image_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="@{model.name}"
+            android:textColor="@{model.selected?@color/black_mine_shaft:@color/grey_boulder}"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

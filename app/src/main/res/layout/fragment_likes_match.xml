@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.fragments.LikesMatchFragment">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/likedEachOtherText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginHorizontal="@dimen/_70sdp"
+            android:text="You and Leslie liked each other!"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_horizontal"/>
+        <RelativeLayout
+            android:id="@+id/imagesLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likedEachOtherText"
+            app:layout_constraintBottom_toTopOf="@id/textView2"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_240sdp">
+            <ImageView
+                android:id="@+id/leftImage"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_width="@dimen/_118sdp"
+                android:layout_height="@dimen/_121sdp"
+                android:src="@drawable/sample_user_image"
+                android:scaleType="centerCrop"/>
+            <ImageView
+                android:id="@+id/rightImage"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="@dimen/_116sdp"
+                android:layout_height="@dimen/_121sdp"
+                android:src="@drawable/sample_user_image"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/likes_match_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/likes_match_distance" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/white_whisper"
+                android:fontFamily="@font/inter_medium"
+                android:layout_centerInParent="true"
+                android:id="@+id/distance"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/likes_match_curly_image"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/textView1"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_70sdp"
+            android:text="@string/it_s_a_match"
+            android:textColor="@color/black_mine_shaft"
+            android:textSize="@dimen/_24sdp"
+            android:fontFamily="@font/abril_fatface_regular"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            android:layout_marginBottom="@dimen/_27sdp"
+            android:layout_marginHorizontal="@dimen/_70sdp"
+            android:text="@string/get_the_chat_started_now"
+            android:textColor="@color/grey_boulder"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_horizontal"/>
+        <RelativeLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/buttonLayout"
+            android:background="@drawable/background_top_corners_8dp"
+            android:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/chatNowButton"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_19sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/chat_now"/>
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/unlike"
+                android:layout_below="@+id/chatNowButton"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/theme"
+                android:text="@string/unlike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_14sdp"
+                android:layout_marginVertical="@dimen/_4sdp"/>
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

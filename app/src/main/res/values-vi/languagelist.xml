@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_zulu">Zulu</string>
+    <string name="language_english">Tiếng Anh</string>
+    <string name="language_afrikaans">Afrikaans</string>
+    <string name="language_swahili">Swahili</string>
+    <string name="language_portuguese">Tiếng Bồ Đào Nha</string>
+    <string name="language_arabic">Tiếng Ả Rập chuẩn hiện đại</string>
+    <string name="language_french">Tiếng Pháp</string>
+    <string name="language_mandarin">Tiếng Quan Thoại</string>
+    <string name="language_hindi">Tiếng Hindi</string>
+    <string name="language_russian">Tiếng Nga</string>
+    <string name="language_spanish">Tiếng Tây Ban Nha</string>
+    <string name="language_bengali">Tiếng Bengal</string>
+    <string name="language_japanese">Tiếng Nhật</string>
+    <string name="language_indonesian">Tiếng Indonesia</string>
+    <string name="language_german">Tiếng Đức</string>
+    <string name="language_vietnamese">Tiếng Việt</string>
+    <string name="language_telugu">Tiếng Telugu</string>
+    <string name="language_turkish">Tiếng Thổ Nhĩ Kỳ</string>
+    <string name="language_marathi">Tiếng Marathi</string>
+    <string name="language_sesotho">Tiếng Sesotho</string>
+    <string name="language_nigerian_pidgin">Tiếng Pidgin Nigeria</string>
+    <string name="language_tamil">Tiếng Tamil</string>
+    <string name="language_romanian">Tiếng Rumani</string>
+    <string name="language_polish">Tiếng Ba Lan</string>
+    <string name="language_ukrainian">Tiếng Ukraina</string>
+    <string name="language_italian">Tiếng Ý</string>
+    <string name="language_korean">Tiếng Hàn</string>
+    <string name="language_thai">Tiếng Thái</string>
+    <string name="language_filipino">Tiếng Filipino</string>
+    <string name="language_dutch">Tiếng Hà Lan</string>
+</resources>

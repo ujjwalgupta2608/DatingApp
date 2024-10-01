@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <TextView
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/planDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/black_mine_shaft"
+        android:text="Lorem Ipsum is simply dummy text"
+        android:drawablePadding="@dimen/_6sdp"
+        android:drawableStart="@drawable/choose_plan_icon">
+
+    </TextView>
+</layout>
